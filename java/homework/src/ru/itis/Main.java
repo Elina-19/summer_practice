@@ -6,7 +6,6 @@ import homework.models.Course;
 import homework.models.Teacher;
 
 import javax.sql.DataSource;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -22,11 +21,10 @@ public class Main {
             throw new IllegalArgumentException(e);
         }
 
-        ConfigProperties configProperties = new ConfigProperties(new HikariConfig(), properties);
-        DataSource dataSource = new HikariDataSource(configProperties.getConfig());
+        DataSource dataSource = new HikariDataSource(ConfigProperties.setProperties(new HikariConfig(), properties));
 
         CoursesRepository coursesRepository = new CoursesRepositoryJdbcTemplateImpl(dataSource);
 
-        coursesRepository.update(new Course(9, "kf", "eml", "ffkm", new Teacher(3, "f", "fe", 3)));
+        System.out.println(coursesRepository.findById(2));
     }
 }
