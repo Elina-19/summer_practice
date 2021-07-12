@@ -68,9 +68,10 @@ public class Lesson {
     @Override
     public String toString() {
         return new StringJoiner(",", Lesson.class.getSimpleName() + "[", "]")
-                .add("name='" +name + "'")
+                .add("name='" + name + "'")
                 .add("dayOfWeek='" + dayOfWeek + "'")
                 .add("time=" + time)
+                .add("course=" + course.getName())
                 .toString();
     }
 }

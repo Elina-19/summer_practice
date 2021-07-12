@@ -4,6 +4,7 @@ import homework.models.Course;
 import homework.models.Lesson;
 import homework.models.Student;
 import homework.models.Teacher;
+import homework.src.ru.itis.interfaces.CoursesRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;

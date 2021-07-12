@@ -1,4 +1,4 @@
-package homework.src.ru.itis;
+package homework.src.ru.itis.interfaces;
 
 import homework.models.Course;
 

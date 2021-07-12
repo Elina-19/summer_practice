@@ -2,6 +2,8 @@ package homework.src.ru.itis;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import homework.src.ru.itis.interfaces.CoursesRepository;
+import homework.src.ru.itis.interfaces.LessonRepository;
 import homework.models.Course;
 import homework.models.Teacher;
 
